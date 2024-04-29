@@ -12,9 +12,20 @@ class _ButtonState extends State<Button> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          elevation: 1,
+          shadowColor: Colors.black,
+          title: const Text(
+            'Button',
+            style: TextStyle(
+              fontSize: 25,
+            ),
+          ),
+        ),
         body: Container(
           width: double.infinity,
-          margin: EdgeInsets.all(10),
+          margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             border: Border.all(color: Colors.black, width: 1),
@@ -22,12 +33,6 @@ class _ButtonState extends State<Button> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Container(
-                  margin: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    border: BorderDirectional(bottom: BorderSide(width: 1,)),
-                  ),
-                  child: Text('Common Button')),
               ElevatedButton(
                 onPressed: () {},
                 child: const Text('Elevated'),
@@ -48,9 +53,13 @@ class _ButtonState extends State<Button> {
                 onPressed: () {},
                 child: const Text('Filled Tonal'),
               ),
-              FloatingActionButton(onPressed: () {
-
-              },child: const Icon(Icons.add),),
+              FloatingActionButton(
+                onPressed: () {},
+                child: const Icon(Icons.add),
+              ),
+              IconButton(onPressed: () {
+                
+              }, icon: const Icon(Icons.accessibility)),
             ],
           ),
         ),
