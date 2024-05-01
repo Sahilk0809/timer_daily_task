@@ -1,16 +1,94 @@
-# time_daily_task
+# Button Task
+<img src = "https://github.com/Sahilk0809/timer_daily_task/assets/149374235/7cd8e54a-a659-424e-9643-02ed86560bea" height=65% width=22%>
 
-A new Flutter project.
+<a href="https://github.com/Sahilk0809/timer_daily_task/blob/master/lib/button.dart">Click here to go to the source code</a>
 
-## Getting Started
+# Asyncronous Programming
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+# 1. What is Asynchronous programming?
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Asynchronous programming is a programming paradigm that allows tasks or operations to run independently and concurrently, without waiting for each other to complete before moving on to the next task.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+# 2. What is Future Class ?
+
+Future represents a value that may not be available yet. It encapsulates an asynchronous operation and provides a way to handle the result or error when it becomes available. 
+
+
+# 3. What is Duration class & Future.delayed() constructor with Example ?
+
+`Duration :`
+A span of time, such as 27 days, 4 hours, 12 minutes, and 3 seconds. A Duration represents a difference from one point in time to another.
+
+`Future.delayed() :`
+Delay function creates a future that runs its computation after a delay.
+
+# Example
+
+```bash
+  void main(){
+
+  print("Hello Android!");
+
+  Future.delayed(Duration(seconds: 3), () {
+    print("Hello Dart!"); // this line will execute after the duration completes
+  },);
+
+  print("Hello Flutter!");
+}
+```
+
+# 4. What is the Use of the async & await keyword?
+
+`async :` The async keyword is used to mark a function as asynchronous.
+
+`await :` The await keyword is used to pause the execution of an asynchronous function until a particular asynchronous operation is completed. 
+
+# 5. What is Recursion ? With Example. 
+
+ The function calls itself repeatedly until a base condition is reached.
+
+ # Example
+
+ ```bash
+ void main() {  
+   int factorial(int num){  
+     
+  if(num<=1) { // base case  
+        return 1;  
+  else{  
+         return n*fact(n-1);  
+      }  
+    }      
+   }  
+}  
+```
+
+# 6. What is Timer class with example?
+
+A countdown timer that can be configured to fire once or repeatedly.
+
+# Example
+
+ ```bash
+ import 'dart:async';
+
+void main(){
+
+  print("Hello Android!");
+
+  Timer(Duration(seconds: 3), () { 
+    print("Hello Dart!");
+  });
+
+  print("Hello Flutter!");
+}
+```
+
+# 7. What is Timer.periodic and use with Example?
+
+
+
+
+
