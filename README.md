@@ -90,5 +90,8 @@ void main(){
 
 
 
+# Digital Clock App
+<img src="https://github.com/Sahilk0809/timer_daily_task/assets/149374235/49324529-c9f6-42e2-87e3-719ccdecb194" height=65% width=22%>
+
 
 
