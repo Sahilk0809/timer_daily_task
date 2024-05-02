@@ -88,7 +88,23 @@ void main(){
 
 # 7. What is Timer.periodic and use with Example?
 
+It allows you to schedule a callback to be executed repeatedly with a specified duration between each call.
+
+# Example
+
+```bash
+var counter = 3;
+Timer.periodic(const Duration(seconds: 2), (timer) {
+  print(timer.tick);
+  counter--;
+  if (counter == 0) {
+    print('Cancel timer');
+    timer.cancel();
+  }
+});
+```
 
 
-
+# Digital Clock App
+<img src="https://github.com/Sahilk0809/timer_daily_task/assets/149374235/49324529-c9f6-42e2-87e3-719ccdecb194" height=65% width=22%>
 
