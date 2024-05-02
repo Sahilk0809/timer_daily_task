@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:time_daily_task/utils/global.dart';
 
@@ -61,13 +62,29 @@ class _DigitalClockState extends State<DigitalClock> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                '${dateTime.hour%12} : ${dateTime.minute} : ${dateTime.second} $timeZone',
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 40,
-                  fontWeight: FontWeight.w600,
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    '${dateTime.hour%12} : ${dateTime.minute} : ${dateTime.second} ',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 40,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 15),
+                    child: Text(
+                      timeZone,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ],
               ),
               Text(
                 day,
@@ -75,6 +92,67 @@ class _DigitalClockState extends State<DigitalClock> {
                   color: Colors.white,
                   fontSize: 30,
                   fontWeight: FontWeight.w500,
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(40),
+                height: 200,
+                width: 200,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(width: 5, color: Colors.white,),
+                ),
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Container(
+                      height: 10,
+                      width: 10,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.red,
+                      ),
+                    ),
+
+                    ...List.generate(60, (index) => Transform.rotate(
+                      angle: ((index+1) * 6 * pi)/180,
+                      child: ((index+1)%5==0)? const VerticalDivider(
+                        endIndent: 170,
+                        thickness: 1,
+                      )
+                      :
+                      const VerticalDivider(
+                        endIndent: 180,
+                        thickness: 1,
+                      )
+                    ),),
+
+                    Transform.rotate(
+                      angle: dateTime.second * (6 * pi)/180,
+                      child: const VerticalDivider(
+                        thickness: 3,
+                        indent: 20,
+                        endIndent: 93,
+                      ),
+                    ),
+                    Transform.rotate(
+                      angle: dateTime.minute * (6 * pi)/180,
+                      child: const VerticalDivider(
+                        thickness: 5,
+                        indent: 30,
+                        endIndent: 93,
+                      ),
+                    ),
+                    Transform.rotate(
+                      angle: (dateTime.hour % 12 + dateTime.minute/60) * 30 * pi/180,
+                      child: const VerticalDivider(
+                        thickness: 6,
+                        color: Colors.red,
+                        indent: 40,
+                        endIndent: 93,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
