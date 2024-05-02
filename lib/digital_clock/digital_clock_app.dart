@@ -117,8 +117,9 @@ class _DigitalClockState extends State<DigitalClock> {
                     ...List.generate(60, (index) => Transform.rotate(
                       angle: ((index+1) * 6 * pi)/180,
                       child: ((index+1)%5==0)? const VerticalDivider(
-                        endIndent: 170,
-                        thickness: 1,
+                        color: Colors.red,
+                        endIndent: 173,
+                        thickness: 1.5,
                       )
                       :
                       const VerticalDivider(
@@ -128,27 +129,27 @@ class _DigitalClockState extends State<DigitalClock> {
                     ),),
 
                     Transform.rotate(
-                      angle: dateTime.second * (6 * pi)/180,
+                      angle: (dateTime.hour % 12 + dateTime.minute/60) * 30 * pi/180,
                       child: const VerticalDivider(
-                        thickness: 3,
-                        indent: 20,
+                        thickness: 4.5,
+                        color: Colors.red,
+                        indent: 40,
                         endIndent: 93,
                       ),
                     ),
                     Transform.rotate(
                       angle: dateTime.minute * (6 * pi)/180,
                       child: const VerticalDivider(
-                        thickness: 5,
+                        thickness: 3.5,
                         indent: 30,
                         endIndent: 93,
                       ),
                     ),
                     Transform.rotate(
-                      angle: (dateTime.hour % 12 + dateTime.minute/60) * 30 * pi/180,
+                      angle: dateTime.second * (6 * pi)/180,
                       child: const VerticalDivider(
-                        thickness: 6,
-                        color: Colors.red,
-                        indent: 40,
+                        thickness: 2.5,
+                        indent: 20,
                         endIndent: 93,
                       ),
                     ),
