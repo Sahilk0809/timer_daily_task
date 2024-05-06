@@ -115,3 +115,11 @@ https://github.com/Sahilk0809/timer_daily_task/assets/149374235/7d06b5b1-e3f2-49
 
 <a href="https://github.com/Sahilk0809/timer_daily_task/blob/master/lib/digital_clock/digital_clock_app.dart"> Click here for the source code </a>
 
+# Timer App
+
+https://github.com/Sahilk0809/timer_daily_task/assets/149374235/319dfde2-6c65-4395-af46-2ecf89b99c44
+
+<a href="https://github.com/Sahilk0809/timer_daily_task/tree/master/lib"> Click here for the source code </a>
+
+
+
