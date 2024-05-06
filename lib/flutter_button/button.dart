@@ -15,7 +15,7 @@ class _ButtonState extends State<Button> {
         appBar: AppBar(
           centerTitle: true,
           elevation: 1,
-          shadowColor: Colors.black,
+          shadowColor: Colors.grey,
           title: const Text(
             'Button',
             style: TextStyle(

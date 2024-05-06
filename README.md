@@ -1,7 +1,7 @@
 # Button Task
 <img src = "https://github.com/Sahilk0809/timer_daily_task/assets/149374235/7cd8e54a-a659-424e-9643-02ed86560bea" height=65% width=22%>
 
-<a href="https://github.com/Sahilk0809/timer_daily_task/blob/master/lib/button.dart">Click here to go to the source code</a>
+<a href="https://github.com/Sahilk0809/timer_daily_task/blob/master/lib/button.dart">Click here for the source code</a>
 
 # Asyncronous Programming
 
@@ -107,4 +107,11 @@ Timer.periodic(const Duration(seconds: 2), (timer) {
 
 # Digital Clock App
 <img src="https://github.com/Sahilk0809/timer_daily_task/assets/149374235/49324529-c9f6-42e2-87e3-719ccdecb194" height=65% width=22%>
+
+# Analog Clock
+<img src="https://github.com/Sahilk0809/timer_daily_task/assets/149374235/87c59645-ee5a-4e30-ba0c-aa2a0157a535" height=65% width=22%>
+
+https://github.com/Sahilk0809/timer_daily_task/assets/149374235/7d06b5b1-e3f2-495e-a640-a95577c73d39
+
+<a href="https://github.com/Sahilk0809/timer_daily_task/blob/master/lib/digital_clock/digital_clock_app.dart"> Click here for the source code </a>
 
