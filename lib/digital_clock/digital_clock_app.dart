@@ -60,8 +60,8 @@ class _DigitalClockState extends State<DigitalClock> {
             ),
           ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(height: 350,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -94,67 +94,35 @@ class _DigitalClockState extends State<DigitalClock> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              Container(
-                margin: EdgeInsets.all(40),
-                height: 200,
-                width: 200,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(width: 5, color: Colors.white,),
-                ),
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Container(
-                      height: 10,
-                      width: 10,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.red,
-                      ),
-                    ),
-
-                    ...List.generate(60, (index) => Transform.rotate(
-                      angle: ((index+1) * 6 * pi)/180,
-                      child: ((index+1)%5==0)? const VerticalDivider(
-                        color: Colors.red,
-                        endIndent: 173,
-                        thickness: 1.5,
-                      )
-                      :
-                      const VerticalDivider(
-                        endIndent: 180,
-                        thickness: 1,
-                      )
-                    ),),
-
-                    Transform.rotate(
-                      angle: (dateTime.hour % 12 + dateTime.minute/60) * 30 * pi/180,
-                      child: const VerticalDivider(
-                        thickness: 4.5,
-                        color: Colors.red,
-                        indent: 40,
-                        endIndent: 93,
-                      ),
-                    ),
-                    Transform.rotate(
-                      angle: dateTime.minute * (6 * pi)/180,
-                      child: const VerticalDivider(
-                        thickness: 3.5,
-                        indent: 30,
-                        endIndent: 93,
-                      ),
-                    ),
-                    Transform.rotate(
-                      angle: dateTime.second * (6 * pi)/180,
-                      child: const VerticalDivider(
-                        thickness: 2.5,
-                        indent: 20,
-                        endIndent: 93,
-                      ),
-                    ),
-                  ],
-                ),
+              const SizedBox(height: 280,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  OutlinedButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/digital');
+                      },
+                      child: const Text(
+                        'Digital',
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      )),
+                  OutlinedButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/analogue');
+                      },
+                      child: const Text(
+                        'Analogue',
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      )),
+                  OutlinedButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/strap');
+                      },
+                      child: const Text(
+                        'Strap',
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      )),
+                ],
               ),
             ],
           ),
